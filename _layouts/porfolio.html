@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<!--
+Alpha by HTML5 UP
+html5up.net | @n33co
+Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+
+<html>
+
+	{% include head.html %}
+
+	<body>
+		<div id="page-wrapper">
+
+    		{% include header.html %}
+
+			<!-- Main -->
+				<section id="main" class="container">
+					<header>
+						<h2>Portfolio</h2>
+						<p>Some of my latest projects</p>
+					</header>
+
+					{{ content }}
+
+				</section>
+
+		</div>
+
+		{% include footer.html %}		
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/jquery.scrollgress.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

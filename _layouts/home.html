@@ -1,0 +1,84 @@
+
+<!DOCTYPE HTML>
+<!--
+  Alpha by HTML5 UP
+  html5up.net | @n33co
+  Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+
+<html>
+  
+  {% include head.html %}
+
+  <body class="landing">
+    <div {% if page.body-id %}id="{{ page.body-id }}"{% endif %}>
+
+      {% include header.html %}
+
+      <!-- Banner -->
+      <section id="banner">
+        <div id="bannerContent">
+          <h2>Ricardo Sánchez Sotres</h2>
+          <p>UX Developer, Consultant & iOS Programmer<br/>from Madrid to the world.</p>
+        </div>
+      </section>
+
+      <!-- Main -->
+      <section id="main" class="container">
+        <section class="box special">
+        <div id="avatar">
+          <img src="images/avatar.jpg" alt>
+        </div>
+
+        {{ content }}
+
+        <ul class="icons">
+          <li><a href="https://twitter.com/foolonhill" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+          <li><a href="https://github.com/Odrakir" class="icon fa-github"><span class="label">Github</span></a></li>
+          <li><a href="http://stackoverflow.com/users/942420/odrakir" class="icon fa-stack-overflow"><span class="label">Stackoverflow</span></a></li>
+          <li><a href="https://www.linkedin.com/pub/ricardo-sánchez-sotres/3a/662/731" class="icon fa-linkedin"><span class="label">Stackoverflow</span></a></li>
+        </ul>
+      </section>  
+
+      <section id="projects">
+        <div class="row">
+
+        	{% for project in page.featured %}
+            <div class="6u 12u(narrower)">
+              <a href="{{ project.link }}">
+                <section class="box special project">
+                  <span class="image featured"><img src="projects/{{ project.thumb }}" alt="" /></span>
+                  <h3>{{ project.name }}</h3>
+                  <p>{{ project.text }}</p>
+                </section>
+              </a>
+            </div>
+          {% endfor %}      
+
+        </div>
+      </section>
+
+      <section class="box">
+        <div id="projectsFooter">
+          <div class="button alt">View Full Porfolio</div>            
+        </div>
+      </section>
+
+      {% include contact.html %}
+
+    </div>
+
+    {% include footer.html %}
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.dropotron.min.js"></script>
+    <script src="assets/js/jquery.scrollgress.min.js"></script>
+    <script src="assets/js/skel.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+    <script src="assets/js/main.js"></script>
+
+  </body>
+
+</html>
