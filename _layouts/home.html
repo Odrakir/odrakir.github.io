@@ -44,6 +44,14 @@
       <section id="projects">
         <div class="row">
 
+            <div class="6u 12u(narrower)">
+                              <section class="box special project">
+          <p>This web is <strong>under construction</strong>. In the meantime, all you can see here is my latest project. Click the image to the right of this text.</p>
+
+                </section>
+
+            </div>
+
         	{% for project in page.featured %}
             <div class="6u 12u(narrower)">
               <a href="{{ project.link }}">
@@ -58,13 +66,13 @@
 
         </div>
       </section>
-
+<!--
       <section class="box">
         <div id="projectsFooter">
           <a href="porfolio.html" class="button alt">View Full Porfolio</a>            
         </div>
       </section>
-
+-->
       {% include contact.html %}
 
     </div>
