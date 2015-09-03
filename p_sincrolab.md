@@ -9,14 +9,14 @@ gallery:
    cols: 3u 6u(narrower)
  - image: ecdls11
    size: 375x667
-   cols: 3u 6u(narrower)   
+   cols: 3u 6u(narrower)
  - image: ecdls12
    size: 375x667
-   cols: 3u 6u(narrower)      
+   cols: 3u 6u(narrower)
  - image: ecdls13
    size: 375x667
    cols: 3u 6u(narrower)
-   
+
 ---
 ###Description
 n bla bla bla
@@ -27,7 +27,7 @@ n bla bla bla
 ###Screenshots
 <div class="my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
   <div class="picture row" itemscope itemtype="http://schema.org/ImageGallery">
-                  
+
     {% for image in page.gallery %}
       <figure class="{{ image.cols }}" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
         <a href="projects/screenshots/{{ image.image }}.jpg" itemprop="contentUrl" data-size="{{ image.size }}" data-index="0">
@@ -38,4 +38,3 @@ n bla bla bla
 
   </div>
 </div>
-

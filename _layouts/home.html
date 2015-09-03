@@ -7,7 +7,7 @@
 -->
 
 <html>
-  
+
   {% include head.html %}
 
   <body class="landing">
@@ -39,19 +39,14 @@
           <li><a href="https://www.linkedin.com/pub/ricardo-sánchez-sotres/3a/662/731" class="icon fa-linkedin"><span class="label">Stackoverflow</span></a></li>
           <li><a href="mailto:odrakir@gmail.com" class="icon fa-envelope"><span class="label">Mail</span></a></li>
         </ul>
-      </section>  
+      </section>
+
+
+
+      <h2>Recent projects</h2>      
 
       <section id="projects">
         <div class="row">
-
-            <div class="6u 12u(narrower)">
-                              <section class="box special project">
-          <p>This web is <strong>under construction</strong>. In the meantime, all you can see here is my latest project. Click the image to the right of this text.</p>
-
-                </section>
-
-            </div>
-
         	{% for project in page.featured %}
             <div class="6u 12u(narrower)">
               <a href="{{ project.link }}">
@@ -62,14 +57,14 @@
                 </section>
               </a>
             </div>
-          {% endfor %}      
+          {% endfor %}
 
         </div>
       </section>
 <!--
       <section class="box">
         <div id="projectsFooter">
-          <a href="porfolio.html" class="button alt">View Full Porfolio</a>            
+          <a href="porfolio.html" class="button alt">View Full Porfolio</a>
         </div>
       </section>
 -->
