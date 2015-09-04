@@ -4,18 +4,21 @@ title:  "n"
 subtitle: "by Jorge Drexler"
 banner: p_n.jpg
 gallery:
- - image: ecdls10
-   size: 375x667
-   cols: 3u 6u(narrower)
- - image: ecdls11
-   size: 375x667
-   cols: 3u 6u(narrower)
- - image: ecdls12
-   size: 375x667
-   cols: 3u 6u(narrower)
- - image: ecdls13
-   size: 375x667
-   cols: 3u 6u(narrower)
+ - image: n1
+   size: 852x639
+   cols: 6u 6u(narrower)
+ - image: n1_2
+   size: 852x639
+   cols: 6u 6u(narrower)
+ - image: n2
+   size: 852x639
+   cols: 6u 6u(narrower)
+ - image: n2_2
+   size: 852x639
+   cols: 6u 6u(narrower)
+ - image: n3
+   size: 852x639
+   cols: 6u 6u(narrower)
 
 ---
 ###Description
@@ -40,3 +43,18 @@ This time I had to come up and design the interface for the three songs and deve
   <img alt="Get it on Google Play"
        src="https://developer.android.com/images/brand/en_generic_rgb_wo_45.png" />
 </a>
+
+###Screenshots
+<div class="my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
+  <div class="picture row" itemscope itemtype="http://schema.org/ImageGallery">
+
+    {% for image in page.gallery %}
+      <figure class="{{ image.cols }}" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+        <a href="projects/screenshots/n/{{ image.image }}.png" itemprop="contentUrl" data-size="{{ image.size }}" data-index="0">
+          <img src="projects/screenshots/n/t_{{ image.image }}.png" itemprop="thumbnail">
+        </a>
+      </figure>
+    {% endfor %}
+
+  </div>
+</div>
