@@ -10,7 +10,14 @@ featured:
    name: n by Jorge Drexler
    text: The first appsong or 'aplicanción'. Three interactive songs in which the user can change what the Drexler sings in realtime.
    link: p_n.html
-
+ - thumb: sincrolab.jpg
+   name: Sincrolab
+   text: Games for kids with learning dissabilities, backed by a control panel where tutor can configure the game and follow the kid's evolution.
+   link: p_sincrolab.html   
+ - thumb: openbank.jpg
+   name: Openbank
+   text: This is the day to day app for Openbank account owners. You can do all your basic banking operations through this iPhone and iPad app.
+   link: p_openbank.html   
 ---
 
 ##About Me
