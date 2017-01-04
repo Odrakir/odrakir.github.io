@@ -11,24 +11,16 @@
   {% include head.html %}
 
   <body class="landing">
-    <div {% if page.body-id %}id="{{ page.body-id }}"{% endif %}>
-
-      {% include header.html %}
-
-      <!-- Banner -->
-      <section id="banner">
-        <div id="bannerContent">
-          <h2>Ricardo Sánchez Sotres</h2>
+    <div>
+      <!-- Main -->
+      <section id="main" class="container">
+        <section class="box special">
+          <div>
+          <h1>Ricardo Sánchez Sotres</h1>
           <p>UX Developer, Consultant & iOS Programmer<br/>from Madrid to the world.</p>
         </div>
       </section>
 
-      <!-- Main -->
-      <section id="main" class="container">
-        <section class="box special">
-        <div id="avatar">
-          <img src="images/avatar.jpg" alt>
-        </div>
 
         {{ content }}
 
