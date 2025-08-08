@@ -177,7 +177,10 @@ if ('serviceWorker' in navigator) {
     for (let y=0;y<=H;y++){ ctx.beginPath(); ctx.moveTo(0,y*S); ctx.lineTo(W*S,y*S); ctx.stroke(); }
     for (let y=0;y<H;y++) for (let x=0;x<W;x++) if (state.grid[y][x]) drawCell(x,y,state.grid[y][x]);
   }
-  function hardDropY(p){ let py=p.y; while(!collide(p, state.grid, 0, (p.y+1)-py)) p.y++; const fy=p.y; p.y=py; return fy; }
+  function hardDropY(p){
+  while(!collide(p, state.grid, 0, 1)) p.y++;
+  return p.y;
+}
   function drawPiece(p, ghost=false){
     const {m,x,y,t}=p;
     for (let j=0;j<m.length;j++) for (let i=0;i<m[0].length;i++)
@@ -197,7 +200,9 @@ if ('serviceWorker' in navigator) {
   function draw(){
     drawGrid();
     if (state.cur){
-      const ghost = { ...state.cur, y: hardDropY({...state.cur}) };
+      const tmp = { t: state.cur.t, m: state.cur.m.map(r=>r.slice()), x: state.cur.x, y: state.cur.y };
+      const gy = hardDropY(tmp);
+      const ghost = { ...state.cur, y: gy };
       drawPiece(ghost, true); drawPiece(state.cur);
     }
     if (state.gameOver){
